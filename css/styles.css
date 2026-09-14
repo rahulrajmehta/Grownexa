@@ -1944,3 +1944,116 @@ button {
     width: 100%;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Mobile Exclusive Top Banner (Hidden on Desktop, Visible ONLY on Mobile <= 768px)
+   --------------------------------------------------------------------------- */
+.mobile-exclusive-banner-section {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-exclusive-banner-section {
+    display: block !important;
+    width: 100%;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .hero-section {
+    padding-top: 95px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .mobile-exclusive-banner-card {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid rgba(212, 175, 55, 0.65);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), 0 0 35px rgba(212, 175, 55, 0.25);
+    background: #0d0f15;
+    cursor: pointer;
+    transition: transform var(--transition-normal);
+  }
+
+  .mobile-exclusive-banner-card:active {
+    transform: scale(0.985);
+  }
+
+  .mobile-top-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  /* Interactive overlay WhatsApp button positioned directly on top of the banner */
+  .mobile-banner-wa-btn {
+    position: absolute;
+    top: 70.8%;
+    left: 7.5%;
+    width: 85%;
+    height: 12.4%;
+    border-radius: 9999px;
+    background: linear-gradient(180deg, rgba(37, 211, 102, 0.94) 0%, rgba(18, 140, 126, 0.98) 100%);
+    border: 2.5px solid #ffffff;
+    box-shadow: 0 0 25px rgba(37, 211, 102, 0.7), 0 4px 15px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: clamp(1.05rem, 4.5vw, 1.35rem);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    z-index: 10;
+    animation: wa-btn-pulse 2.2s infinite ease-in-out;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .mobile-banner-wa-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.95);
+  }
+
+  .mobile-banner-wa-btn svg {
+    width: 26px;
+    height: 26px;
+    fill: currentColor;
+    flex-shrink: 0;
+  }
+
+  .mobile-banner-wa-arrow {
+    width: 18px !important;
+    height: 18px !important;
+    stroke: #ffffff;
+    stroke-width: 3;
+    fill: none !important;
+    margin-left: 2px;
+  }
+
+  @keyframes wa-btn-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7), 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+    70% {
+      box-shadow: 0 0 0 14px rgba(37, 211, 102, 0), 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  /* Hide the duplicate desktop card on mobile */
+  .hero-visual {
+    display: none !important;
+  }
+}
+
