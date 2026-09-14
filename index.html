@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrowNexa Media | Social Media Marketing Agency</title>
+  <meta name="description" content="GrowNexa Media helps businesses build a stronger social presence and turn attention into meaningful growth through smart strategy, reels, content, and Meta Ads.">
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%236366f1'/><path d='M30 70 L50 30 L70 70 Z' fill='none' stroke='white' stroke-width='10' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. HEADER / NAVBAR (Sticky)
+       ========================================================================= -->
+  <header class="header">
+    <div class="container nav-container">
+      <!-- Logo / Wordmark -->
+      <a href="#home" class="brand-logo" aria-label="GrowNexa Media Home">
+        <div class="logo-icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+            <polyline points="16 7 22 7 22 13"></polyline>
+          </svg>
+        </div>
+        <div class="brand-text">GrowNexa<span>Media</span></div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#why-us" class="nav-link">Why Us</a></li>
+          <li><a href="#process" class="nav-link">Process</a></li>
+          <li><a href="#packages" class="nav-link">Packages</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Desktop CTA -->
+      <div class="nav-cta-wrap">
+        <a href="#" class="btn btn-whatsapp nav-cta-btn" data-wa-message="Hi GrowNexa Media, I came from your website navbar and would like to chat about social media services.">
+          <svg viewBox="0 0 24 24">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41c-1.47 0-2.92-.39-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.59c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+          </svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer">
+    <ul class="mobile-nav-links">
+      <li><a href="#home" class="mobile-nav-link">Home</a></li>
+      <li><a href="#services" class="mobile-nav-link">Services</a></li>
+      <li><a href="#why-us" class="mobile-nav-link">Why Us</a></li>
+      <li><a href="#process" class="mobile-nav-link">Process</a></li>
+      <li><a href="#packages" class="mobile-nav-link">Packages</a></li>
+      <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+    </ul>
+
+    <div class="mobile-nav-bottom">
+      <a href="#" class="btn btn-whatsapp w-full" data-wa-message="Hi GrowNexa Media, I'd like to get started with social media marketing.">
+        <svg viewBox="0 0 24 24">
+          <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41c-1.47 0-2.92-.39-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.59c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+        </svg>
+        Chat on WhatsApp
+      </a>
+      <a href="#services" class="btn btn-secondary w-full">Explore Services</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- =======================================================================
+         2. HERO SECTION — DARK BACKGROUND (#08080A)
+         ======================================================================= -->
+    <section id="home" class="hero-section theme-dark">
+      <div class="container hero-grid">
+        <!-- Hero Text Content -->
+        <div class="hero-content reveal-on-scroll">
+          <div class="hero-tagline-badge">
+            <span class="badge-pulse"></span>
+            <span>Turn Your Social Presence Into Business Growth.</span>
+          </div>
+
+          <h1 class="hero-title">
+            Grow Your Business With <span class="text-gradient">Smarter Social</span> Media Marketing.
+          </h1>
+
+          <p class="hero-copy">
+            From strategy and content to paid campaigns, we help businesses build a stronger social presence and turn attention into meaningful growth.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#" class="btn btn-whatsapp" data-wa-message="Hi GrowNexa Media, I'm ready to get started with your social media marketing services. Let's discuss!">
+              <svg viewBox="0 0 24 24">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41c-1.47 0-2.92-.39-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.59c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+              </svg>
+              Get Started on WhatsApp
+            </a>
+
+            <a href="#services" class="btn btn-secondary">
+              View Our Services
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Trust Indicators -->
+          <div class="hero-trust-indicators">
+            <div class="trust-item">
+              <div class="trust-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <span>Strategy Driven</span>
+            </div>
+
+            <div class="trust-item">
+              <div class="trust-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+              </div>
+              <span>Creative Content</span>
+            </div>
+
+            <div class="trust-item">
+              <div class="trust-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
+              <span>Performance Focused</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Visual: High-Tech Abstract Marketing Dashboard -->
+        <div class="hero-visual reveal-on-scroll">
+          <div class="hero-dashboard-card">
+            <!-- Header bar of dashboard -->
+            <div class="dashboard-header">
+              <div class="dash-brand">
+                <div class="dash-avatar">GN</div>
+                <div>
+                  <div class="dash-title-text">Campaign Intelligence</div>
+                  <div class="dash-subtitle-text">Multi-Channel Growth Engine</div>
+                </div>
+              </div>
+              <div class="dash-live-badge">
+                <span class="dash-live-dot"></span>
+                Active Monitoring
+              </div>
+            </div>
+
+            <!-- Metrics snapshot -->
+            <div class="analytics-metric-grid">
+              <div class="dash-stat-box">
+                <div class="dash-stat-label">Monthly Social Reach</div>
+                <div class="dash-stat-val">
+                  342.8K
+                  <span class="dash-stat-growth">↑ 48%</span>
+                </div>
+              </div>
+
+              <div class="dash-stat-box">
+                <div class="dash-stat-label">Avg. Engagement Rate</div>
+                <div class="dash-stat-val">
+                  5.6%
+                  <span class="dash-stat-growth">↑ 2.4x</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dynamic SVG Wave Chart -->
+            <div class="dash-stat-label">Audience Growth & Impression Velocity</div>
+            <svg class="dash-chart-svg" viewBox="0 0 440 120" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#6366f1" stop-opacity="0.45"/>
+                  <stop offset="100%" stop-color="#6366f1" stop-opacity="0.0"/>
+                </linearGradient>
+                <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#6366f1"/>
+                  <stop offset="50%" stop-color="#8b5cf6"/>
+                  <stop offset="100%" stop-color="#25d366"/>
+                </linearGradient>
+              </defs>
+              <path d="M0,100 C60,90 90,65 140,75 C190,85 220,30 280,45 C340,60 380,20 440,15 L440,120 L0,120 Z" fill="url(#chartGrad)"/>
+              <path d="M0,100 C60,90 90,65 140,75 C190,85 220,30 280,45 C340,60 380,20 440,15" fill="none" stroke="url(#lineGrad)" stroke-width="3.5" stroke-linecap="round"/>
+              <circle cx="280" cy="45" r="5" fill="#ffffff" stroke="#8b5cf6" stroke-width="2.5"/>
+              <circle cx="440" cy="15" r="5" fill="#ffffff" stroke="#25d366" stroke-width="2.5"/>
+            </svg>
+          </div>
+
+          <!-- Floating Badge 1: Instagram Growth -->
+          <div class="floating-badge floating-badge-1">
+            <div class="badge-icon-box badge-icon-ig">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+            <div>
+              <h4>Instagram Strategy</h4>
+              <p>Reels & Audience Funnel</p>
+            </div>
+          </div>
+
+          <!-- Floating Badge 2: Meta Ads Engine -->
+          <div class="floating-badge floating-badge-2">
+            <div class="badge-icon-box badge-icon-meta">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+              </svg>
+            </div>
+            <div>
+              <h4>Meta Ads Scaling</h4>
+              <p>Precision Creative Testing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. BEST SERVICES SECTION — LIGHT BACKGROUND (#F8F8F6)
+         ======================================================================= -->
+    <section id="services" class="section-padding theme-light">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-badge section-badge-light">What We Do</span>
+          <h2 class="section-title">Our Best Services</h2>
+          <p class="section-subtitle">
+            Everything you need to build, manage and grow your social media presence.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1: Social Media Management -->
+          <div class="service-card reveal-on-scroll">
+            <div class="service-card-top">
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </div>
+              <h3 class="service-title">Social Media Management</h3>
+              <p class="service-desc">Content planning, publishing and account management.</p>
+            </div>
+            <div class="service-card-bottom">
+              <a href="#" class="btn btn-whatsapp-subtle w-full" data-wa-message="Hi GrowNexa Media, I'd like to book your Social Media Management service. Please share details on content planning and daily publishing.">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41c-1.47 0-2.92-.39-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.59c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+                </svg>
+                Book on WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 2: Instagram Growth Strategy -->
+          <div class="service-card reveal-on-scroll">
+            <div class="service-card-top">
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </div>
+              <h3 class="service-title">Instagram Growth Strategy</h3>
+              <p class="service-desc">Audience research, content strategy and profile optimization.</p>
+            </div>
+            <div class="service-card-bottom">
+              <a href="#" class="btn btn-whatsapp-subtle w-full" data-wa-message="Hi GrowNexa Media, I would like to book your Instagram Growth Strategy service for my brand.">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41c-1.47 0-2.92-.39-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.59c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+                </svg>
+                Book on WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 3: Reels & Content Creation -->
+          <div class="service-card reveal-on-scroll">
+            <div class="service-card-top">
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                </svg>
+              </div>
+              <h3 class="service-title">Reels & Content Creation</h3>
+              <p class="service-desc">Scroll-stopping short-form content designed around your brand.</p>
+            </div>
+            <div class="service-card-bottom">
+              <a href="#" class="btn btn-whatsapp-subtle w-full" data-wa-message="Hi GrowNexa Media, I'm interested in booking Reels & Content Creation to build engaging short-form videos.">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41c-1.47 0-2.92-.39-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.59c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+                </svg>
+                Book on WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 4: Meta Ads Management -->
+          <div class="service-card reveal-on-scroll">
+            <div class="service-card-top">
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <h3 class="service-title">Meta Ads Management</h3>
+              <p class="service-desc">Campaign setup, audience targeting, creative testing and optimization.</p>
+            </div>
+            <div class="service-card-bottom">
+              <a href="#" class="btn btn-whatsapp-subtle w-full" data-wa-message="Hi GrowNexa Media, I'd like to book Meta Ads Management to run targeted campaigns and optimize advertising performance.">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41c-1.47 0-2.92-.39-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.59c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+                </svg>
+                Book on WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 5: Creative & Brand Design -->
+          <div class="service-card reveal-on-scroll">
+            <div class="service-card-top">
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                  <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                  <path d="M2 2l7.586 7.586"></path>
+                  <circle cx="11" cy="11" r="2"></circle>
+                </svg>
+              </div>
+              <h3 class="service-title">Creative & Brand Design</h3>
+              <p class="service-desc">Social posts, promotional creatives and visual brand assets.</p>
+            </div>
+            <div class="service-card-bottom">
+              <a href="#" class="btn btn-whatsapp-subtle w-full" data-wa-message="Hi GrowNexa Media, I'd like to book Creative & Brand Design for eye-catching visual assets and post design.">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41c-1.47 0-2.92-.39-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.59c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+                </svg>
+                Book on WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 6: Social Media Strategy -->
+          <div class="service-card reveal-on-scroll">
+            <div class="service-card-top">
+              <div class="service-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                  <line x1="8" y1="2" x2="8" y2="18"></line>
+                  <line x1="16" y1="6" x2="16" y2="22"></line>
+                </svg>
+              </div>
+              <h3 class="service-title">Social Media Strategy</h3>
+              <p class="service-desc">A customized roadmap based on your business goals and audience.</p>
+            </div>
+            <div class="service-card-bottom">
+              <a href="#" class="btn btn-whatsapp-subtle w-full" data-wa-message="Hi GrowNexa Media, I'd like to book a comprehensive Social Media Strategy roadmap for our upcoming quarters.">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41c-1.47 0-2.92-.39-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.59c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+                </svg>
+                Book on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. WHY GROWNEXA — DARK CHARCOAL BACKGROUND (#13141A)
+         ======================================================================= -->
+    <section id="why-us" class="section-padding theme-dark-alt">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-badge section-badge-dark">The Agency Edge</span>
+          <h2 class="section-title">Why Businesses Choose GrowNexa Media</h2>
+          <p class="section-subtitle">
+            We operate as an extension of your team with direct communication, tailored strategy, and consistent execution.
+          </p>
+        </div>
+
+        <div class="why-us-grid">
+          <!-- Feature 1 -->
+          <div class="feature-block reveal-on-scroll">
+            <div class="feature-number">PILLAR 01</div>
+            <h3 class="feature-title">Strategy First</h3>
+            <p class="feature-desc">Every campaign starts with a clear strategy. We examine your target audience, competitors, and positioning before producing a single creative.</p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="feature-block reveal-on-scroll">
+            <div class="feature-number">PILLAR 02</div>
+            <h3 class="feature-title">Creative That Fits Your Brand</h3>
+            <p class="feature-desc">Consistent visuals and messaging. We maintain your brand identity while crafting thumb-stopping reels, carousels, and promotional graphics.</p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="feature-block reveal-on-scroll">
+            <div class="feature-number">PILLAR 03</div>
+            <h3 class="feature-title">Data-Informed Decisions</h3>
+            <p class="feature-desc">Use campaign and audience insights to improve performance. We analyze engagement numbers, CTR, and conversion cues to refine every cycle.</p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="feature-block reveal-on-scroll">
+            <div class="feature-number">PILLAR 04</div>
+            <h3 class="feature-title">Simple Communication</h3>
+            <p class="feature-desc">Easy, direct communication through WhatsApp. No bloated ticket portals or delayed responses—just straightforward collaboration.</p>
+          </div>
+        </div>
+
+        <div class="why-us-cta-center reveal-on-scroll">
+          <a href="#" class="btn btn-whatsapp" data-wa-message="Hi GrowNexa Media, I'd like to talk to your team on WhatsApp about managing our social channels.">
+            <svg viewBox="0 0 24 24">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41c-1.47 0-2.92-.39-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.59c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+            </svg>
+            Talk to Our Team on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. HOW IT WORKS — LIGHT BACKGROUND (#F8F8F6)
+         ======================================================================= -->
+    <section id="process" class="section-padding theme-light">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-badge section-badge-light">Transparent Workflow</span>
+          <h2 class="section-title">Simple Process. Clear Communication.</h2>
+          <p class="section-subtitle">
+            A frictionless 3-step pathway designed to get your brand noticed without bureaucratic delays.
+          </p>
+        </div>
+
+        <div class="process-timeline">
+          <!-- Step 01 -->
+          <div class="process-step-card reveal-on-scroll">
+            <div class="step-num-badge">01</div>
+            <h3 class="step-title">Tell Us About Your Business</h3>
+            <p class="step-desc">Start a conversation on WhatsApp and share your goals, current social channels, target audience, and growth expectations.</p>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="process-step-card reveal-on-scroll">
+            <div class="step-num-badge">02</div>
+            <h3 class="step-title">Get Your Strategy</h3>
+            <p class="step-desc">We understand your audience, brand and requirements. We draft a tailored content blueprint, posting schedules, and paid campaign structure.</p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="process-step-card reveal-on-scroll">
+            <div class="step-num-badge">03</div>
+            <h3 class="step-title">Start Growing</h3>
+            <p class="step-desc">Content, campaigns and ongoing optimization are handled according to the agreed plan, backed by transparent monthly check-ins.</p>
+          </div>
+        </div>
+
+        <div class="process-cta-center reveal-on-scroll">
+          <a href="#" class="btn btn-whatsapp" data-wa-message="Hi GrowNexa Media, I'm ready for Step 01! Let me share my business details and goals.">
+            <svg viewBox="0 0 24 24">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41c-1.47 0-2.92-.39-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.59c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+            </svg>
+            Start on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. PACKAGES — DARK BACKGROUND (#08080A)
+         ======================================================================= -->
+    <section id="packages" class="section-padding theme-dark">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-badge section-badge-dark">Flexible Plans</span>
+          <h2 class="section-title">Choose What Fits Your Goals</h2>
+          <p class="section-subtitle">
+            Tailored agency tiers structured around your brand's growth phase. Transparent quotes with no fake urgency.
+          </p>
+        </div>
+
+        <div class="packages-grid">
+          <!-- Package 1: Starter -->
+          <div class="package-card reveal-on-scroll">
+            <div class="package-header">
+              <h3 class="package-tier-name">Starter</h3>
+              <p class="package-for">For businesses beginning their social media journey.</p>
+            </div>
+
+            <div class="package-price-wrap">
+              <div class="package-price-label">Pricing Model</div>
+              <div class="package-price-value">Custom Quote</div>
+            </div>
+
+            <ul class="package-features-list">
+              <li class="package-feature-item">
+                <span class="feature-check-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Content planning</span>
+              </li>
+              <li class="package-feature-item">
+                <span class="feature-check-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Social media management</span>
+              </li>
+              <li class="package-feature-item">
+                <span class="feature-check-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Basic creative support</span>
+              </li>
+              <li class="package-feature-item">
+                <span class="feature-check-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Monthly reporting</span>
+              </li>
+            </ul>
+
+            <a href="#" class="btn btn-whatsapp w-full" data-wa-message="Hi GrowNexa Media, I'd like to discuss a custom quote for the Starter package for my business.">
+              <svg viewBox="0 0 24 24">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41c-1.47 0-2.92-.39-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.59c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+              </svg>
+              Discuss on WhatsApp
+            </a>
+          </div>
+
+          <!-- Package 2: Growth (Most Popular) -->
+          <div class="package-card featured reveal-on-scroll">
+            <span class="popular-badge">Most Popular</span>
+
+            <div class="package-header">
+              <h3 class="package-tier-name">Growth</h3>
+              <p class="package-for">For businesses looking for consistent social media growth.</p>
+            </div>
+
+            <div class="package-price-wrap">
+              <div class="package-price-label">Pricing Model</div>
+              <div class="package-price-value">Custom Quote</div>
+            </div>
+
+            <ul class="package-features-list">
+              <li class="package-feature-item">
+                <span class="feature-check-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Advanced content strategy</span>
+              </li>
+              <li class="package-feature-item">
+                <span class="feature-check-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Reels & creatives</span>
+              </li>
+              <li class="package-feature-item">
+                <span class="feature-check-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Social media management</span>
+              </li>
+              <li class="package-feature-item">
+                <span class="feature-check-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Performance insights</span>
+              </li>
+            </ul>
+
+            <a href="#" class="btn btn-whatsapp w-full" data-wa-message="Hi GrowNexa Media, I'd like to discuss the Growth package (Most Popular) and get a tailored proposal.">
+              <svg viewBox="0 0 24 24">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41c-1.47 0-2.92-.39-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.59c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+              </svg>
+              Discuss on WhatsApp
+            </a>
+          </div>
+
+          <!-- Package 3: Performance -->
+          <div class="package-card reveal-on-scroll">
+            <div class="package-header">
+              <h3 class="package-tier-name">Performance</h3>
+              <p class="package-for">For businesses running serious paid campaigns.</p>
+            </div>
+
+            <div class="package-price-wrap">
+              <div class="package-price-label">Pricing Model</div>
+              <div class="package-price-value">Custom Quote</div>
+            </div>
+
+            <ul class="package-features-list">
+              <li class="package-feature-item">
+                <span class="feature-check-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Meta Ads management</span>
+              </li>
+              <li class="package-feature-item">
+                <span class="feature-check-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Creative testing</span>
+              </li>
+              <li class="package-feature-item">
+                <span class="feature-check-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Audience optimization</span>
+              </li>
+              <li class="package-feature-item">
+                <span class="feature-check-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Performance reporting</span>
+              </li>
+            </ul>
+
+            <a href="#" class="btn btn-whatsapp w-full" data-wa-message="Hi GrowNexa Media, I'd like to discuss the Performance package for Meta Ads management and creative testing.">
+              <svg viewBox="0 0 24 24">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41c-1.47 0-2.92-.39-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.59c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+              </svg>
+              Discuss on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         7. SOCIAL PROOF — LIGHT BACKGROUND (#F8F8F6)
+         ======================================================================= -->
+    <section id="proof" class="section-padding theme-light">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-badge section-badge-light">Client Collaboration Model</span>
+          <h2 class="section-title">Built Around Better Social Experiences</h2>
+          <div class="proof-disclaimer">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            <span>Representative client partnership feedback frameworks</span>
+          </div>
+          <p class="section-subtitle">
+            How modern businesses collaborate with GrowNexa Media to build structured digital workflows.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Card 1 -->
+          <div class="testimonial-card reveal-on-scroll">
+            <div class="testimonial-quote-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+            </div>
+            <p class="testimonial-text">
+              “GrowNexa streamlined our entire content calendar. Having short-form reels scripted and edited consistently gave our feed the aesthetic cohesion we had been missing for months.”
+            </p>
+            <div class="client-profile">
+              <div class="client-avatar">AK</div>
+              <div>
+                <div class="client-name">Aarav K. [Sample Client]</div>
+                <div class="client-meta">Founder, D2C Lifestyle Goods</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="testimonial-card reveal-on-scroll">
+            <div class="testimonial-quote-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+            </div>
+            <p class="testimonial-text">
+              “Direct communication via WhatsApp makes iterations effortless. Their creative testing approach on Meta helped us identify our highest-converting audience segments quickly.”
+            </p>
+            <div class="client-profile">
+              <div class="client-avatar">SM</div>
+              <div>
+                <div class="client-name">Sara M. [Sample Client]</div>
+                <div class="client-meta">Marketing Lead, Boutique Studio</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="testimonial-card reveal-on-scroll">
+            <div class="testimonial-quote-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+            </div>
+            <p class="testimonial-text">
+              “No fluff, no exaggerated promises. GrowNexa delivered clean brand visuals and regular reporting that accurately explained what resonated with our business audience.”
+            </p>
+            <div class="client-profile">
+              <div class="client-avatar">RV</div>
+              <div>
+                <div class="client-name">Rohan V. [Sample Client]</div>
+                <div class="client-meta">Operations Director, B2B SaaS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proof-cta-center reveal-on-scroll">
+          <a href="#" class="btn btn-whatsapp" data-wa-message="Hi GrowNexa Media, I'd like to discuss my business requirements and see how we can collaborate.">
+            <svg viewBox="0 0 24 24">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41c-1.47 0-2.92-.39-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.59c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+            </svg>
+            Discuss Your Business on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         8. FAQ — DARK CHARCOAL BACKGROUND (#13141A)
+         ======================================================================= -->
+    <section id="faq" class="section-padding theme-dark-alt">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-badge section-badge-dark">Clarifications</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            Clear answers to common questions about our agency services, delivery model, and workflow.
+          </p>
+        </div>
+
+        <div class="faq-accordion-wrap reveal-on-scroll">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" type="button">
+              <span>What social media platforms do you manage?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                We primarily focus on Instagram and Meta (Facebook), which form the strongest organic and paid acquisition channels for most consumer and B2B brands. We also assist with LinkedIn strategy and YouTube Shorts when relevant to your industry.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" type="button">
+              <span>Do you create content as well?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                Yes! We handle copywriting, graphic design, carousel design, and short-form video editing (Reels/Shorts). You can share your raw video clips or brand assets, and our team turns them into polished, scroll-stopping social content.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" type="button">
+              <span>Do you manage Meta Ads?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                Yes. Our Meta Ads Management includes complete campaign architecture: pixel tracking, custom audience configuration, creative testing, copy variations, and weekly ROAS/CPA optimization.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" type="button">
+              <span>Can you create a custom package?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                Absolutely. Every business has unique needs. If our Starter, Growth, or Performance tiers do not match your exact scope, we will structure a bespoke quote tailored to your posting frequency, ad spend, and creative requirements.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" type="button">
+              <span>How do we communicate with your team?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                We believe in frictionless, fast communication. You get a direct WhatsApp channel with our team for day-to-day updates, quick feedback, and asset approvals, complemented by organized monthly performance reports.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button class="faq-question-btn" type="button">
+              <span>How do I get started?</span>
+              <svg class="faq-icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                Getting started takes less than 2 minutes. Click any of the "Chat on WhatsApp" buttons, share your current social links, and we will schedule an initial briefing to outline your customized roadmap.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Closing Callout -->
+        <div class="faq-cta-box reveal-on-scroll">
+          <p class="faq-cta-text">Have another question? Chat with us directly on WhatsApp.</p>
+          <a href="#" class="btn btn-whatsapp" data-wa-message="Hi GrowNexa Media, I have a specific question about your social media marketing services.">
+            <svg viewBox="0 0 24 24">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41c-1.47 0-2.92-.39-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.59c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+            </svg>
+            Chat with Us on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         9. FINAL CTA — LIGHT/DARK CONTRAST SECTION
+         ======================================================================= -->
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="final-cta-card reveal-on-scroll">
+          <div class="final-cta-content">
+            <span class="section-badge section-badge-dark">Take The Next Step</span>
+            <h2 class="final-cta-title">Ready To Build A Stronger Social Presence?</h2>
+            <p class="final-cta-copy">
+              Tell us about your business, your goals and what you want to achieve. Our team will help you find the right social media solution.
+            </p>
+
+            <div class="final-cta-btn-row">
+              <a href="#" class="btn btn-whatsapp" data-wa-message="Hi GrowNexa Media, I'm ready to build a stronger social presence for my brand. Let's talk!">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41c-1.47 0-2.92-.39-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.59c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+                </svg>
+                Chat With GrowNexa on WhatsApp
+              </a>
+
+              <button type="button" class="btn btn-secondary js-open-consultation">
+                Get a Free Consultation
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="12" y1="18" x2="12" y2="12"></line>
+                  <line x1="9" y1="15" x2="15" y2="15"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       10. FOOTER — DARK BACKGROUND (#060709)
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand-col">
+          <a href="#home" class="brand-logo">
+            <div class="logo-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                <polyline points="16 7 22 7 22 13"></polyline>
+              </svg>
+            </div>
+            <div class="brand-text">GrowNexa<span>Media</span></div>
+          </a>
+          <p>
+            Social media strategy, content and performance solutions for growing businesses.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="#home">Home</a></li>
+            <li class="footer-link-item"><a href="#services">Services</a></li>
+            <li class="footer-link-item"><a href="#why-us">About / Why Us</a></li>
+            <li class="footer-link-item"><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services Links -->
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="#services">Instagram Growth</a></li>
+            <li class="footer-link-item"><a href="#services">Reels & Content</a></li>
+            <li class="footer-link-item"><a href="#services">Meta Ads Management</a></li>
+            <li class="footer-link-item"><a href="#services">Brand Strategy</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact via WhatsApp -->
+        <div>
+          <h4 class="footer-col-title">Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41c-1.47 0-2.92-.39-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.59c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+            </svg>
+            <div>
+              <div style="font-weight: 700; color: #ffffff; font-size: 1rem;">+91 91226 75361</div>
+              <div style="font-size: 0.8rem; color: #94a3b8;">WhatsApp Direct Line</div>
+            </div>
+          </div>
+          <a href="#" class="btn btn-whatsapp-subtle" data-wa-message="Hi GrowNexa Media, I'm reaching out to +91 91226 75361 through your footer contact link.">
+            Message On WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>© 2026 GrowNexa Media. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <button type="button" class="legal-btn" id="openPrivacyModal">Privacy Policy</button>
+          <span>•</span>
+          <button type="button" class="legal-btn" id="openTermsModal">Terms & Conditions</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       11. FLOATING WHATSAPP BUTTON (Persistent Bottom Right)
+       ========================================================================= -->
+  <a href="#" class="floating-whatsapp" id="floatingWhatsApp" data-wa-message="Hi GrowNexa Media, I'm on your website and would like to chat about social media marketing services." aria-label="Chat on WhatsApp">
+    <span class="floating-pulse-beacon"></span>
+    <svg viewBox="0 0 24 24">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41c-1.47 0-2.92-.39-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.59c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+    </svg>
+    <span>Chat on WhatsApp</span>
+  </a>
+
+  <!-- =========================================================================
+       12. INTERACTIVE MODAL: FREE CONSULTATION (Pre-fills WhatsApp)
+       ========================================================================= -->
+  <div class="modal-overlay" id="consultationModal" role="dialog" aria-modal="true" aria-labelledby="consultationTitle">
+    <div class="modal-window">
+      <button type="button" class="modal-close-btn" id="consultationCloseBtn" aria-label="Close modal">✕</button>
+      <div class="modal-header">
+        <h3 class="modal-title" id="consultationTitle">Get a Free Consultation</h3>
+        <p class="modal-subtitle">Tell us about your brand and receive tailored recommendations directly on WhatsApp.</p>
+      </div>
+
+      <form id="consultationForm">
+        <div class="form-group">
+          <label class="form-label" for="consultName">Your Name</label>
+          <input type="text" id="consultName" class="form-input" placeholder="e.g. Alex Morgan" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="consultBusiness">Business / Brand Name</label>
+          <input type="text" id="consultBusiness" class="form-input" placeholder="e.g. Apex Apparel or Studio Alpha" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="consultService">Service of Primary Interest</label>
+          <select id="consultService" class="form-select">
+            <option value="Social Media Management">Social Media Management</option>
+            <option value="Instagram Growth Strategy">Instagram Growth Strategy</option>
+            <option value="Reels & Content Creation">Reels & Content Creation</option>
+            <option value="Meta Ads Management">Meta Ads Management</option>
+            <option value="Creative & Brand Design">Creative & Brand Design</option>
+            <option value="Complete Custom Package">Complete Custom Package</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="consultGoals">Key Goal or Challenge</label>
+          <textarea id="consultGoals" class="form-textarea" placeholder="Describe your target audience, current follower base, or ad goals..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-whatsapp w-full">
+          <svg viewBox="0 0 24 24">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.19 8.19 0 0 1-5.82 2.41c-1.47 0-2.92-.39-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.188 8.188 0 0 1-1.25-4.38c0-4.54 3.7-8.24 8.25-8.24zm4.52 11.59c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+          </svg>
+          Send Details & Open on WhatsApp
+        </button>
+        <p class="form-note">Submitting will format your notes into a clean message and open WhatsApp automatically.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       13. LEGAL MODAL: PRIVACY POLICY
+       ========================================================================= -->
+  <div class="modal-overlay" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+    <div class="modal-window">
+      <button type="button" class="modal-close-btn js-legal-close" aria-label="Close modal">✕</button>
+      <div class="modal-header">
+        <h3 class="modal-title" id="privacyTitle">Privacy Policy</h3>
+        <p class="modal-subtitle">Last updated: 2026</p>
+      </div>
+      <div style="font-size: 0.92rem; color: #cbd5e1; line-height: 1.65; display: flex; flex-direction: column; gap: 14px;">
+        <p>At <strong>GrowNexa Media</strong>, we respect your privacy. This policy explains how we collect and use information when you interact with our landing page and WhatsApp communication channels.</p>
+        <p><strong>1. Information We Collect:</strong> When you initiate a conversation via WhatsApp or submit a consultation form, you may provide your name, business name, and marketing objectives. We only use this information to communicate directly with you regarding agency services.</p>
+        <p><strong>2. Third-Party Services:</strong> Interactions through WhatsApp are governed by WhatsApp / Meta’s own Privacy Policy. We do not sell or rent your contact details to third parties.</p>
+        <p><strong>3. Data Security:</strong> We take practical security measures to safeguard all project correspondence and client briefs.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       14. LEGAL MODAL: TERMS & CONDITIONS
+       ========================================================================= -->
+  <div class="modal-overlay" id="termsModal" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
+    <div class="modal-window">
+      <button type="button" class="modal-close-btn js-legal-close" aria-label="Close modal">✕</button>
+      <div class="modal-header">
+        <h3 class="modal-title" id="termsTitle">Terms & Conditions</h3>
+        <p class="modal-subtitle">Last updated: 2026</p>
+      </div>
+      <div style="font-size: 0.92rem; color: #cbd5e1; line-height: 1.65; display: flex; flex-direction: column; gap: 14px;">
+        <p>Welcome to <strong>GrowNexa Media</strong>. By visiting our website or engaging our services, you agree to these terms:</p>
+        <p><strong>1. Scope of Services:</strong> GrowNexa Media provides digital marketing, social media management, creative design, and advertising management services based on agreed custom proposals.</p>
+        <p><strong>2. Realistic Growth Expectations:</strong> Social media performance depends on audience dynamics, advertising budgets, algorithm updates, and brand offer viability. We make honest recommendations and do not make guaranteed revenue or get-rich claims.</p>
+        <p><strong>3. Intellectual Property:</strong> Client deliverables and created assets become client property upon settlement of agreed project dues, as defined in custom contracts.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
