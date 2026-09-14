@@ -11,7 +11,7 @@ const WHATSAPP_CONFIG = {
   phone: "919122675361", // International format (India country code 91 + 9122675361)
   displayPhone: "+91 91226 75361",
   rawPhone: "9122675361",
-  defaultMessage: "Hi GrowNexa Media, I'd like to know more about your social media marketing services."
+  defaultMessage: "Hi, I want ID"
 };
 
 /**
@@ -250,11 +250,11 @@ function initConsultationModal() {
       const goals = document.getElementById('consultGoals')?.value.trim() || 'Looking for business growth';
 
       const structuredMsg = 
-`Hi GrowNexa Media! I would like to request a free consultation:
+`Hi, I want ID:
 • Name: ${name}
 • Business / Industry: ${business}
 • Service Needed: ${service}
-• Key Goals: ${goals}`;
+• Notes: ${goals}`;
 
       closeModal();
       openWhatsApp(structuredMsg);

@@ -931,6 +931,60 @@ button {
 }
 
 /* -----------------------------
+   Dynamic Section Background Art (Sections 2, 4, 6, etc.)
+   ----------------------------- */
+.section-with-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-with-bg .section-bg-art {
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/hero-banner.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section-with-bg-light .section-bg-art {
+  opacity: 0.16;
+  filter: blur(4px) contrast(1.1);
+  transform: scale(1.05);
+}
+
+.section-with-bg-light .section-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 65%),
+              linear-gradient(180deg, rgba(248, 248, 246, 0.86) 0%, rgba(248, 248, 246, 0.94) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section-with-bg-dark .section-bg-art {
+  opacity: 0.20;
+  filter: blur(8px) brightness(0.65);
+  transform: scale(1.06);
+}
+
+.section-with-bg-dark .section-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.14) 0%, transparent 65%),
+              linear-gradient(180deg, rgba(8, 8, 10, 0.85) 0%, rgba(8, 8, 10, 0.96) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section-with-bg > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* -----------------------------
    3. Best Services Section (Light - #F8F8F6)
    ----------------------------- */
 .services-grid {
