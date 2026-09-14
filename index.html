@@ -92,6 +92,8 @@
          2. HERO SECTION — DARK BACKGROUND (#08080A)
          ======================================================================= -->
     <section id="home" class="hero-section theme-dark">
+      <div class="hero-bg-art"></div>
+      <div class="hero-bg-overlay"></div>
       <div class="container hero-grid">
         <!-- Hero Text Content -->
         <div class="hero-content reveal-on-scroll">
@@ -157,89 +159,38 @@
           </div>
         </div>
 
-        <!-- Hero Right Visual: High-Tech Abstract Marketing Dashboard -->
+        <!-- Hero Right Visual: Featured Creative Showcase Card -->
         <div class="hero-visual reveal-on-scroll">
-          <div class="hero-dashboard-card">
-            <!-- Header bar of dashboard -->
-            <div class="dashboard-header">
-              <div class="dash-brand">
-                <div class="dash-avatar">GN</div>
-                <div>
-                  <div class="dash-title-text">Campaign Intelligence</div>
-                  <div class="dash-subtitle-text">Multi-Channel Growth Engine</div>
-                </div>
-              </div>
-              <div class="dash-live-badge">
-                <span class="dash-live-dot"></span>
-                Active Monitoring
-              </div>
+          <div class="hero-showcase-wrapper">
+            <div class="hero-image-card">
+              <img src="assets/hero-banner.jpg" alt="GrowNexa Media Premium Creative Design" class="hero-featured-img">
+              <div class="hero-image-shine"></div>
             </div>
 
-            <!-- Metrics snapshot -->
-            <div class="analytics-metric-grid">
-              <div class="dash-stat-box">
-                <div class="dash-stat-label">Monthly Social Reach</div>
-                <div class="dash-stat-val">
-                  342.8K
-                  <span class="dash-stat-growth">↑ 48%</span>
-                </div>
+            <!-- Floating Badge 1: Premium Creative -->
+            <div class="floating-badge floating-badge-1">
+              <div class="badge-icon-box badge-icon-gold">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
               </div>
-
-              <div class="dash-stat-box">
-                <div class="dash-stat-label">Avg. Engagement Rate</div>
-                <div class="dash-stat-val">
-                  5.6%
-                  <span class="dash-stat-growth">↑ 2.4x</span>
-                </div>
+              <div>
+                <h4>Premium Visuals</h4>
+                <p>High-Impact Brand Identity</p>
               </div>
             </div>
 
-            <!-- Dynamic SVG Wave Chart -->
-            <div class="dash-stat-label">Audience Growth & Impression Velocity</div>
-            <svg class="dash-chart-svg" viewBox="0 0 440 120" preserveAspectRatio="none">
-              <defs>
-                <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#6366f1" stop-opacity="0.45"/>
-                  <stop offset="100%" stop-color="#6366f1" stop-opacity="0.0"/>
-                </linearGradient>
-                <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stop-color="#6366f1"/>
-                  <stop offset="50%" stop-color="#8b5cf6"/>
-                  <stop offset="100%" stop-color="#25d366"/>
-                </linearGradient>
-              </defs>
-              <path d="M0,100 C60,90 90,65 140,75 C190,85 220,30 280,45 C340,60 380,20 440,15 L440,120 L0,120 Z" fill="url(#chartGrad)"/>
-              <path d="M0,100 C60,90 90,65 140,75 C190,85 220,30 280,45 C340,60 380,20 440,15" fill="none" stroke="url(#lineGrad)" stroke-width="3.5" stroke-linecap="round"/>
-              <circle cx="280" cy="45" r="5" fill="#ffffff" stroke="#8b5cf6" stroke-width="2.5"/>
-              <circle cx="440" cy="15" r="5" fill="#ffffff" stroke="#25d366" stroke-width="2.5"/>
-            </svg>
-          </div>
-
-          <!-- Floating Badge 1: Instagram Growth -->
-          <div class="floating-badge floating-badge-1">
-            <div class="badge-icon-box badge-icon-ig">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </div>
-            <div>
-              <h4>Instagram Strategy</h4>
-              <p>Reels & Audience Funnel</p>
-            </div>
-          </div>
-
-          <!-- Floating Badge 2: Meta Ads Engine -->
-          <div class="floating-badge floating-badge-2">
-            <div class="badge-icon-box badge-icon-meta">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
-              </svg>
-            </div>
-            <div>
-              <h4>Meta Ads Scaling</h4>
-              <p>Precision Creative Testing</p>
+            <!-- Floating Badge 2: Campaign Growth -->
+            <div class="floating-badge floating-badge-2">
+              <div class="badge-icon-box badge-icon-meta">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Campaign Growth</h4>
+                <p>Social Reach & Paid Scaling</p>
+              </div>
             </div>
           </div>
         </div>
