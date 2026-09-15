@@ -27,6 +27,22 @@ function openWhatsApp(customText) {
   const message = customText || WHATSAPP_CONFIG.defaultMessage;
   const encodedText = encodeURIComponent(message.trim());
   const url = `https://wa.me/${targetPhone}?text=${encodedText}`;
+
+  // Trigger Google Ads Conversion Tracking
+  try {
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18450549273'
+      });
+      gtag('event', 'generate_lead', {
+        'event_category': 'WhatsApp',
+        'event_label': message
+      });
+    }
+  } catch (err) {
+    console.warn('Google Tag conversion tracking notice:', err);
+  }
+
   window.open(url, '_blank', 'noopener,noreferrer');
 }
 
