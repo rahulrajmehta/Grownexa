@@ -583,41 +583,69 @@ button {
   overflow: hidden;
 }
 
-.hero-bg-art {
-  position: absolute;
-  inset: 0;
-  background-image: url('../assets/imax-media-banner.png');
-  background-size: cover;
-  background-position: center center;
-  opacity: 0.28;
-  filter: blur(16px) brightness(0.65);
-  transform: scale(1.12);
-  pointer-events: none;
-  z-index: 1;
+.hero-centered-section {
+  padding-top: 140px;
+  padding-bottom: 90px;
 }
 
-.hero-bg-overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 75% 35%, rgba(0, 132, 255, 0.24) 0%, transparent 60%),
-              radial-gradient(circle at 20% 70%, rgba(37, 211, 102, 0.14) 0%, transparent 60%),
-              linear-gradient(180deg, rgba(8, 8, 10, 0.82) 0%, rgba(8, 8, 10, 0.96) 100%);
-  pointer-events: none;
-  z-index: 1;
-}
-
-.hero-grid {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+.hero-content-centered {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 56px;
+  text-align: center;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
+.hero-cta-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px auto 40px;
+}
+
+.btn-hero-offer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 18px 48px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.5);
+  animation: heroPulseOffer 2.2s infinite ease-in-out;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-hero-offer:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 14px 38px rgba(37, 211, 102, 0.55);
+}
+
+.btn-hero-offer svg {
+  width: 26px;
+  height: 26px;
+  fill: currentColor;
+}
+
+@keyframes heroPulseOffer {
+  0% {
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.45);
+  }
+  70% {
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4), 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.hero-trust-centered {
+  justify-content: center;
 }
 
 .hero-tagline-badge {
@@ -981,58 +1009,7 @@ button {
 }
 
 /* -----------------------------
-   Dynamic Section Background Art (Sections 2, 4, 6, etc.)
-   ----------------------------- */
-.section-with-bg {
-  position: relative;
-  overflow: hidden;
-}
-
-.section-with-bg .section-bg-art {
-  position: absolute;
-  inset: 0;
-  background-image: url('../assets/hero-banner.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.section-with-bg-light .section-bg-art {
-  opacity: 0.16;
-  filter: blur(4px) contrast(1.1);
-  transform: scale(1.05);
-}
-
-.section-with-bg-light .section-bg-overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 65%),
-              linear-gradient(180deg, rgba(248, 248, 246, 0.86) 0%, rgba(248, 248, 246, 0.94) 100%);
-  pointer-events: none;
-  z-index: 1;
-}
-
-.section-with-bg-dark .section-bg-art {
-  opacity: 0.20;
-  filter: blur(8px) brightness(0.65);
-  transform: scale(1.06);
-}
-
-.section-with-bg-dark .section-bg-overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.14) 0%, transparent 65%),
-              linear-gradient(180deg, rgba(8, 8, 10, 0.85) 0%, rgba(8, 8, 10, 0.96) 100%);
-  pointer-events: none;
-  z-index: 1;
-}
-
-.section-with-bg > .container {
-  position: relative;
-  z-index: 2;
-}
+/* Background art removed per user request */
 
 /* -----------------------------
    3. Best Services Section (Light - #F8F8F6)
@@ -1996,114 +1973,48 @@ button {
 }
 
 /* ---------------------------------------------------------------------------
-   Mobile Exclusive Top Banner (Hidden on Desktop, Visible ONLY on Mobile <= 768px)
+   Mobile Specific Styles for Centered Hero & Get Offer CTA
    --------------------------------------------------------------------------- */
-.mobile-exclusive-banner-section {
-  display: none !important;
-}
-
 @media (max-width: 768px) {
-  .mobile-exclusive-banner-section {
-    display: block !important;
+  .hero-centered-section {
+    padding-top: 115px;
+    padding-bottom: 70px;
+  }
+
+  .hero-content-centered {
+    padding: 0 4px;
+  }
+
+  .hero-title {
+    font-size: 2.15rem;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  .hero-copy {
+    font-size: 1.02rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .hero-cta-centered {
     width: 100%;
-    margin-bottom: 28px;
-    position: relative;
-    z-index: 5;
-  }
-
-  .hero-section {
-    padding-top: 95px !important;
-    padding-bottom: 50px !important;
-  }
-
-  .mobile-exclusive-banner-card {
-    position: relative;
-    width: 100%;
-    max-width: 420px;
-    margin: 0 auto;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 2px solid rgba(0, 132, 255, 0.65);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), 0 0 35px rgba(0, 132, 255, 0.3);
-    background: #080d1a;
-    cursor: pointer;
-    transition: transform var(--transition-normal);
-  }
-
-  .mobile-exclusive-banner-card:active {
-    transform: scale(0.985);
-  }
-
-  .mobile-top-banner-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-  }
-
-  /* Interactive overlay WhatsApp button positioned directly on top of CONTACT US */
-  .mobile-banner-wa-btn {
-    position: absolute;
-    top: 65.0%;
-    left: 10%;
-    width: 80%;
-    height: 13.8%;
-    border-radius: 9999px;
-    background: linear-gradient(90deg, rgba(37, 211, 102, 0.94) 0%, rgba(0, 132, 255, 0.94) 42%, rgba(0, 102, 230, 0.96) 100%);
-    border: 2.5px solid #ffffff;
-    box-shadow: 0 0 25px rgba(0, 132, 255, 0.75), 0 0 15px rgba(37, 211, 102, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.5);
-    display: flex;
-    align-items: center;
+    margin: 24px auto 36px;
     justify-content: center;
-    gap: 10px;
-    color: #ffffff;
-    font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: clamp(1rem, 4.2vw, 1.25rem);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    letter-spacing: 0.5px;
-    text-decoration: none;
-    z-index: 10;
-    animation: wa-btn-pulse-blue 2.2s infinite ease-in-out;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
 
-  .mobile-banner-wa-btn:active {
-    transform: scale(0.95);
-    box-shadow: 0 0 20px rgba(0, 132, 255, 0.95);
+  .btn-hero-offer {
+    width: 100%;
+    max-width: 340px;
+    padding: 17px 24px;
+    font-size: 1.2rem;
+    justify-content: center;
   }
 
-  .mobile-banner-wa-btn svg {
-    width: 24px;
-    height: 24px;
-    fill: currentColor;
-    flex-shrink: 0;
-  }
-
-  .mobile-banner-wa-arrow {
-    width: 16px !important;
-    height: 16px !important;
-    stroke: #ffffff;
-    stroke-width: 3;
-    fill: none !important;
-    margin-left: 2px;
-  }
-
-  @keyframes wa-btn-pulse-blue {
-    0% {
-      box-shadow: 0 0 0 0 rgba(0, 132, 255, 0.7), 0 0 15px rgba(37, 211, 102, 0.5);
-    }
-    70% {
-      box-shadow: 0 0 0 14px rgba(0, 132, 255, 0), 0 0 25px rgba(37, 211, 102, 0);
-    }
-    100% {
-      box-shadow: 0 0 0 0 rgba(0, 132, 255, 0), 0 0 15px rgba(37, 211, 102, 0.5);
-    }
-  }
-
-  /* Hide the duplicate desktop card on mobile */
-  .hero-visual {
-    display: none !important;
+  .hero-trust-centered {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
 }
-
