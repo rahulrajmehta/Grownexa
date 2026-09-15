@@ -1,5 +1,5 @@
 /**
- * GrowNexa Media - Official Website Scripts
+ * Imax Media - Official Website Scripts
  * Single-Page Responsive Landing Experience
  */
 

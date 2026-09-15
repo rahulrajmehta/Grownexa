@@ -1,6 +1,6 @@
-# GrowNexa Media - Modern Agency Landing Page
+# Imax Media - Modern Agency Landing Page
 
-A premium, responsive, high-converting single-page landing website built for **GrowNexa Media**, a specialized social media marketing agency.
+A premium, responsive, high-converting single-page landing website built for **Imax Media**, a specialized social media marketing agency.
 
 ## Key Features
 
@@ -23,7 +23,7 @@ Open [`js/main.js`](js/main.js) and update line 11:
 ```javascript
 const WHATSAPP_CONFIG = {
   phone: "919122675361", // Active number: 9122675361 (+91 91226 75361)
-  defaultMessage: "Hi GrowNexa Media, I'd like to know more about your social media marketing services."
+  defaultMessage: "Hi, I want ID"
 };
 ```
 
@@ -48,7 +48,7 @@ Then visit: [http://localhost:8085/](http://localhost:8085/)
 ## Project Structure
 
 ```
-grownexa-media/
+imax-media/
 ├── index.html         # Main single-page landing markup
 ├── css/
 │   └── styles.css     # Premium dark/light theme, layout, animations
