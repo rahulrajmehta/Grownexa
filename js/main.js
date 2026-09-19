@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initFaqAccordion();
   initConsultationModal();
+  initAutoWelcomeModal();
   initDirectContactForm();
   initScrollReveal();
 });
@@ -247,6 +248,55 @@ function initConsultationModal() {
       closeModal();
       openWhatsApp(structuredMsg);
       form.reset();
+    });
+  }
+}
+
+// =============================================================================
+// 7.5 AUTO WELCOME POPUP MODAL (Immediate WhatsApp Lead Generation)
+// =============================================================================
+function initAutoWelcomeModal() {
+  const modal = document.getElementById('autoWelcomeModal');
+  const closeBtn = document.getElementById('autoPopupCloseBtn');
+  const ctaBtn = document.getElementById('autoPopupCtaBtn');
+
+  if (!modal) return;
+
+  const openModal = () => {
+    modal.classList.add('active');
+  };
+
+  const closeModal = () => {
+    modal.classList.remove('active');
+  };
+
+  // Open automatically on website visit (small 350ms delay for smooth render)
+  setTimeout(() => {
+    openModal();
+  }, 350);
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+
+  if (ctaBtn) {
+    ctaBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeModal();
+      const message = ctaBtn.getAttribute('data-wa-message') || WHATSAPP_CONFIG.defaultMessage;
+      openWhatsApp(message);
     });
   }
 }
