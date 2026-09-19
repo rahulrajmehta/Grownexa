@@ -1081,7 +1081,7 @@ button {
 }
 
 .service-card-top {
-  margin-bottom: 24px;
+  margin-bottom: 0;
 }
 
 .service-icon-box {
@@ -1848,6 +1848,165 @@ button {
 .modal-subtitle {
   font-size: 0.9rem;
   color: #94a3b8;
+}
+
+/* -----------------------------
+   Auto Welcome Popup Modal Styles
+   ----------------------------- */
+.auto-popup-overlay {
+  z-index: 1200;
+}
+
+.auto-popup-window {
+  max-width: 480px;
+  padding: 36px 30px 30px;
+  background: linear-gradient(180deg, #13151f 0%, #0d0e14 100%);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85), 0 0 45px rgba(37, 99, 235, 0.25);
+  text-align: center;
+}
+
+.auto-popup-header {
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auto-popup-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #93c5fd;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.auto-popup-badge .badge-pulse {
+  width: 8px;
+  height: 8px;
+  background-color: var(--wa-green);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--wa-green);
+  animation: pulse-ring 2s infinite ease-out;
+}
+
+.auto-popup-title {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.auto-popup-title span {
+  background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.auto-popup-subtitle {
+  font-size: 0.92rem;
+  color: #94a3b8;
+  line-height: 1.55;
+}
+
+.auto-popup-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+}
+
+.auto-popup-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.auto-popup-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.2);
+  color: #60a5fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.auto-popup-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.auto-popup-feature-item strong {
+  display: block;
+  font-size: 0.88rem;
+  color: #f1f5f9;
+  line-height: 1.3;
+}
+
+.auto-popup-feature-item p {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  margin: 2px 0 0 0;
+  line-height: 1.35;
+}
+
+.auto-popup-action {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-popup-cta {
+  font-size: 1.15rem;
+  padding: 16px 24px;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.5);
+  width: 100%;
+  justify-content: center;
+}
+
+.auto-popup-dismiss {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 6px 12px;
+  transition: color var(--transition-fast);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.auto-popup-dismiss:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 480px) {
+  .auto-popup-window {
+    padding: 26px 18px 22px;
+  }
+  .auto-popup-title {
+    font-size: 1.55rem;
+  }
 }
 
 /* Consultation Form Controls */

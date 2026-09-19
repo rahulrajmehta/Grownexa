@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initConsultationModal();
   initLegalModals();
   initScrollReveal();
+  initAutoWelcomeModal();
 });
 
 // =============================================================================
@@ -354,5 +355,59 @@ function initScrollReveal() {
   } else {
     // Fallback if IntersectionObserver not supported
     revealElements.forEach(el => el.classList.add('revealed'));
+  }
+}
+
+// =============================================================================
+// 11. AUTO WELCOME POPUP MODAL (Opens on page open)
+// =============================================================================
+function initAutoWelcomeModal() {
+  const modal = document.getElementById('autoWelcomeModal');
+  const closeBtn = document.getElementById('autoPopupCloseBtn');
+  const dismissBtn = document.getElementById('autoPopupDismissBtn');
+  const ctaBtn = document.getElementById('autoPopupCtaBtn');
+
+  if (!modal) return;
+
+  const openModal = () => {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  // Open modal automatically after a short delay (700ms) upon page visit
+  setTimeout(() => {
+    openModal();
+  }, 700);
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+
+  if (dismissBtn) {
+    dismissBtn.addEventListener('click', closeModal);
+  }
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+
+  if (ctaBtn) {
+    ctaBtn.addEventListener('click', () => {
+      closeModal();
+      // WhatsApp trigger + Google Tag event fired via initWhatsAppButtons
+    });
   }
 }
