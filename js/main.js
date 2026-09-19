@@ -1,26 +1,26 @@
 /**
  * Imax Media - Official Website Scripts
- * Single-Page Responsive Landing Experience
+ * Multi-Page Responsive Experience & Google Ads Compliant Tracking
  */
 
 // =============================================================================
 // 1. CONFIGURABLE WHATSAPP SETTINGS
 // =============================================================================
-// Active WhatsApp business number: 9122675361 (+91 91226 75361)
+// Active WhatsApp business number: +91 91226 75361
 const WHATSAPP_CONFIG = {
   phone: "919122675361", // International format (India country code 91 + 9122675361)
   displayPhone: "+91 91226 75361",
   rawPhone: "9122675361",
-  defaultMessage: "Hi, I want ID"
+  defaultMessage: "Hi, I would like to inquire about Imax Media digital marketing services."
 };
 
 /**
  * Open WhatsApp with a custom pre-filled message
+ * Transparently triggers Google Ads conversion tracking
  * @param {string} customText - Pre-filled message string
  */
 function openWhatsApp(customText) {
   let targetPhone = (WHATSAPP_CONFIG.phone || "919122675361").replace(/\D/g, '');
-  // Auto-prefix India country code '91' if 10 digits provided
   if (targetPhone.length === 10) {
     targetPhone = '91' + targetPhone;
   }
@@ -28,7 +28,7 @@ function openWhatsApp(customText) {
   const encodedText = encodeURIComponent(message.trim());
   const url = `https://wa.me/${targetPhone}?text=${encodedText}`;
 
-  // Trigger Google Ads Conversion Tracking
+  // Trigger Google Ads Conversion Tracking (Transparent Lead Generation Event)
   try {
     if (typeof gtag === 'function') {
       gtag('event', 'conversion', {
@@ -53,19 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
   initWhatsAppButtons();
   initStickyNavbar();
   initMobileMenu();
-  initScrollSpy();
   initFaqAccordion();
   initConsultationModal();
-  initLegalModals();
+  initDirectContactForm();
   initScrollReveal();
-  initAutoWelcomeModal();
 });
 
 // =============================================================================
 // 3. WHATSAPP CTA EVENT BINDINGS
 // =============================================================================
 function initWhatsAppButtons() {
-  // Bind all elements with [data-wa-message] attribute
   const waButtons = document.querySelectorAll('[data-wa-message]');
   waButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -92,7 +89,7 @@ function initStickyNavbar() {
   };
 
   window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll(); // initial check
+  handleScroll();
 }
 
 // =============================================================================
@@ -140,52 +137,22 @@ function initMobileMenu() {
 }
 
 // =============================================================================
-// 6. SCROLL SPY ACTIVE NAV LINK
-// =============================================================================
-function initScrollSpy() {
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  if (!sections.length || !navLinks.length) return;
-
-  const onScroll = () => {
-    const scrollPos = window.scrollY + 140;
-
-    sections.forEach(section => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      const id = section.getAttribute('id');
-
-      if (scrollPos >= top && scrollPos < top + height) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('active');
-          }
-        });
-      }
-    });
-  };
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-}
-
-// =============================================================================
-// 7. FAQ ACCORDION
+// 6. FAQ ACCORDION INTERACTION
 // =============================================================================
 function initFaqAccordion() {
   const faqItems = document.querySelectorAll('.faq-item');
+  if (!faqItems.length) return;
 
   faqItems.forEach(item => {
-    const btn = item.querySelector('.faq-question-btn');
-    const panel = item.querySelector('.faq-answer-panel');
+    const questionBtn = item.querySelector('.faq-question-btn');
+    const answerPanel = item.querySelector('.faq-answer-panel');
 
-    if (!btn || !panel) return;
+    if (!questionBtn || !answerPanel) return;
 
-    btn.addEventListener('click', () => {
+    questionBtn.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
 
-      // Close all open items for clean single-item view
+      // Close other open FAQ panels
       faqItems.forEach(otherItem => {
         if (otherItem !== item && otherItem.classList.contains('active')) {
           otherItem.classList.remove('active');
@@ -194,20 +161,19 @@ function initFaqAccordion() {
         }
       });
 
-      // Toggle current
       if (isActive) {
         item.classList.remove('active');
-        panel.style.maxHeight = null;
+        answerPanel.style.maxHeight = null;
       } else {
         item.classList.add('active');
-        panel.style.maxHeight = panel.scrollHeight + 'px';
+        answerPanel.style.maxHeight = answerPanel.scrollHeight + 'px';
       }
     });
   });
 
-  // Open first item by default for inviting interaction
-  if (faqItems.length > 0) {
-    const firstItem = faqItems[0];
+  // Open first item by default
+  const firstItem = faqItems[0];
+  if (firstItem) {
     const firstPanel = firstItem.querySelector('.faq-answer-panel');
     firstItem.classList.add('active');
     if (firstPanel) {
@@ -217,7 +183,7 @@ function initFaqAccordion() {
 }
 
 // =============================================================================
-// 8. INTERACTIVE CONSULTATION MODAL (Pre-formats WhatsApp Message)
+// 7. USER-INITIATED CONSULTATION MODAL (Clean, Click-Triggered)
 // =============================================================================
 function initConsultationModal() {
   const openButtons = document.querySelectorAll('.js-open-consultation');
@@ -239,8 +205,11 @@ function initConsultationModal() {
 
   openButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      openModal();
+      // If on a page without the modal (e.g., dedicated contact page), let default link navigation work
+      if (modal) {
+        e.preventDefault();
+        openModal();
+      }
     });
   });
 
@@ -256,22 +225,24 @@ function initConsultationModal() {
     }
   });
 
-  // Handle Form Submission -> Generates Structured WhatsApp Greeting
+  // Handle Form Submission
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
       const name = document.getElementById('consultName')?.value.trim() || 'Not specified';
       const business = document.getElementById('consultBusiness')?.value.trim() || 'Not specified';
+      const phone = document.getElementById('consultPhone')?.value.trim() || 'Not specified';
       const service = document.getElementById('consultService')?.value || 'General Marketing';
       const goals = document.getElementById('consultGoals')?.value.trim() || 'Looking for business growth';
 
       const structuredMsg = 
-`Hi, I want ID:
+`Hi, I would like to request a consultation with Imax Media:
 • Name: ${name}
 • Business / Industry: ${business}
+• Phone: ${phone}
 • Service Needed: ${service}
-• Notes: ${goals}`;
+• Notes / Goals: ${goals}`;
 
       closeModal();
       openWhatsApp(structuredMsg);
@@ -281,58 +252,97 @@ function initConsultationModal() {
 }
 
 // =============================================================================
-// 9. LEGAL MODALS (Privacy & Terms)
+// 8. WORKING CONTACT PAGE FORM VALIDATION & SUBMISSION
 // =============================================================================
-function initLegalModals() {
-  const privacyTrigger = document.getElementById('openPrivacyModal');
-  const termsTrigger = document.getElementById('openTermsModal');
-  const privacyModal = document.getElementById('privacyModal');
-  const termsModal = document.getElementById('termsModal');
-  const closeBtns = document.querySelectorAll('.js-legal-close');
+function initDirectContactForm() {
+  const form = document.getElementById('directContactForm');
+  const noticeBox = document.getElementById('formStatusNotice');
+  const submitBtn = document.getElementById('contactSubmitBtn');
 
-  const openModal = (targetModal) => {
-    if (!targetModal) return;
-    targetModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
+  if (!form || !noticeBox) return;
+
+  const validateField = (input, errorEl, condition) => {
+    if (!condition) {
+      input.style.borderColor = '#f87171';
+      if (errorEl) errorEl.style.display = 'block';
+      return false;
+    } else {
+      input.style.borderColor = 'rgba(255, 255, 255, 0.12)';
+      if (errorEl) errorEl.style.display = 'none';
+      return true;
+    }
   };
 
-  const closeModal = (targetModal) => {
-    if (!targetModal) return;
-    targetModal.classList.remove('active');
-    document.body.style.overflow = '';
-  };
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-  if (privacyTrigger && privacyModal) {
-    privacyTrigger.addEventListener('click', (e) => {
-      e.preventDefault();
-      openModal(privacyModal);
-    });
-  }
+    const nameInput = document.getElementById('contactFullName');
+    const emailInput = document.getElementById('contactEmail');
+    const phoneInput = document.getElementById('contactPhone');
+    const messageInput = document.getElementById('contactMessage');
 
-  if (termsTrigger && termsModal) {
-    termsTrigger.addEventListener('click', (e) => {
-      e.preventDefault();
-      openModal(termsModal);
-    });
-  }
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const phoneError = document.getElementById('phoneError');
+    const messageError = document.getElementById('messageError');
 
-  closeBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      closeModal(privacyModal);
-      closeModal(termsModal);
-    });
-  });
+    const nameVal = nameInput ? nameInput.value.trim() : '';
+    const emailVal = emailInput ? emailInput.value.trim() : '';
+    const phoneVal = phoneInput ? phoneInput.value.trim() : '';
+    const messageVal = messageInput ? messageInput.value.trim() : '';
 
-  [privacyModal, termsModal].forEach(m => {
-    if (!m) return;
-    m.addEventListener('click', (e) => {
-      if (e.target === m) closeModal(m);
-    });
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phonePattern = /^[\d\s\+\-\(\)]{8,}$/;
+
+    const isNameValid = validateField(nameInput, nameError, nameVal.length >= 2);
+    const isEmailValid = validateField(emailInput, emailError, emailPattern.test(emailVal));
+    const isPhoneValid = validateField(phoneInput, phoneError, phonePattern.test(phoneVal));
+    const isMessageValid = validateField(messageInput, messageError, messageVal.length >= 5);
+
+    if (!isNameValid || !isEmailValid || !isPhoneValid || !isMessageValid) {
+      noticeBox.className = 'form-status-notice error';
+      noticeBox.textContent = 'Please fill in all required fields accurately before submitting.';
+      noticeBox.style.display = 'block';
+      return;
+    }
+
+    // Success State
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
+    }
+
+    // Fire Google Ads Conversion Tracking Event
+    try {
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18450549273'
+        });
+        gtag('event', 'generate_lead', {
+          'event_category': 'ContactForm',
+          'event_label': `Inquiry: ${nameVal}`
+        });
+      }
+    } catch (err) {
+      console.warn('Google Tag conversion tracking notice:', err);
+    }
+
+    setTimeout(() => {
+      noticeBox.className = 'form-status-notice success';
+      noticeBox.textContent = 'Thank you! Your message has been received. Our team at Imax Media will review your requirements and get in touch within 24 business hours.';
+      noticeBox.style.display = 'block';
+
+      form.reset();
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Inquiry';
+      }
+    }, 600);
   });
 }
 
 // =============================================================================
-// 10. REVEAL-ON-SCROLL ANIMATIONS (IntersectionObserver)
+// 9. REVEAL-ON-SCROLL ANIMATIONS (IntersectionObserver)
 // =============================================================================
 function initScrollReveal() {
   const revealElements = document.querySelectorAll('.reveal-on-scroll');
@@ -347,67 +357,12 @@ function initScrollReveal() {
         }
       });
     }, {
-      threshold: 0.12,
-      rootMargin: '0px 0px -40px 0px'
+      threshold: 0.1,
+      rootMargin: '0px 0px -30px 0px'
     });
 
     revealElements.forEach(el => observer.observe(el));
   } else {
-    // Fallback if IntersectionObserver not supported
     revealElements.forEach(el => el.classList.add('revealed'));
-  }
-}
-
-// =============================================================================
-// 11. AUTO WELCOME POPUP MODAL (Opens on page open)
-// =============================================================================
-function initAutoWelcomeModal() {
-  const modal = document.getElementById('autoWelcomeModal');
-  const closeBtn = document.getElementById('autoPopupCloseBtn');
-  const dismissBtn = document.getElementById('autoPopupDismissBtn');
-  const ctaBtn = document.getElementById('autoPopupCtaBtn');
-
-  if (!modal) return;
-
-  const openModal = () => {
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  };
-
-  const closeModal = () => {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-  };
-
-  // Open modal automatically after a short delay (700ms) upon page visit
-  setTimeout(() => {
-    openModal();
-  }, 700);
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeModal);
-  }
-
-  if (dismissBtn) {
-    dismissBtn.addEventListener('click', closeModal);
-  }
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-      closeModal();
-    }
-  });
-
-  if (ctaBtn) {
-    ctaBtn.addEventListener('click', () => {
-      closeModal();
-      // WhatsApp trigger + Google Tag event fired via initWhatsAppButtons
-    });
   }
 }
